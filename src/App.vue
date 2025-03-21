@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import Title from './components/WebAppTitle.vue'
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <Title msg="Joke Generator-3000" />
     </div>
   </header>
 
@@ -14,31 +14,23 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
 header {
   line-height: 1.5;
   max-height: 100vh;
+  font-family: 'Irish Grover', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
   }
 
   header .wrapper {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+    justify-self: center;
   }
 }
 </style>

@@ -13,7 +13,6 @@ import axios from 'axios';
 </template>
 
 <script lang="ts">
-//import { fetchJokes } from '../server/Server.ts';
 const API_URL = "http://localhost:7000/api/getnewjoke";
 
 export default {

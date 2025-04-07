@@ -9,11 +9,11 @@ const port = 7000;
 app.use(Express.json());
 app.use(Cors());
 
-const DB_PASSWORD = "RTPwqCKitGz4PXPl";
-const CONNECTION_STRING = `mongodb+srv://admin:${DB_PASSWORD}@cluster0.oljjaad.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-const DATABASENAME = "Jokes";
-const COLLECTION = "JokesCollection"
-//const API_URL = "http://localhost:7000/api/getnewjoke";
+const DB_USERNAME = username;
+const DB_PASSWORD = password;
+const CONNECTION_STRING = connection_string;
+const DATABASENAME = db_name;
+const COLLECTION = collection;
 
 let database: Db;
 
@@ -59,13 +59,3 @@ async function run() {
 }
 
 run().catch(console.dir);
-
-//export const fetchJokes = async (): Promise<string> => {
-//  try {
-//    const response = await axios.get(API_URL);
-//    return response.data;
-//  } catch (err) {
-//    console.error(`Error fetching jokes: ${err}`);
-//    throw err;
-//  }
-//}

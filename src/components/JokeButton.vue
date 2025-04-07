@@ -1,6 +1,28 @@
+<script lang="ts">
+    export default {
+        data() {
+            return {
+                txt: "Reveal",
+            };
+        },
+        methods: {
+            nextStep() {
+                if (this.txt === 'Reveal') {
+                    this.txt = 'Next Joke'
+                    this.$emit('btnClicked', this.txt)
+                }
+                else {
+                    this.txt = 'Reveal'
+                    this.$emit('btnClicked', this.txt)
+                }
+            }
+        }
+    };
+</script>
+
 <template>
   <div class="item">
-      <button class="btn">Yes!</button>
+      <button v-on:click="nextStep" class="btn">{{ txt }}</button>
   </div>
 </template>
 
@@ -43,4 +65,4 @@
     font-size: 3vw;
   }
 }
-</style>  
+</style>
